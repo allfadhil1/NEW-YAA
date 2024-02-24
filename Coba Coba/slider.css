@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.containerr{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: #222;
+
+}
+
+.containerr input{
+    appearance: none;
+}
+
+.containerr .dots{
+    position: absolute;
+    bottom: 70px;
+    z-index: 10000;
+    display: flex;
+    gap: 6px;
+}
+
+.containerr .dots label{
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    cursor: pointer;
+    border-radius: 50%;
+    opacity: 0.5;
+    border: 2px solid #222;
+}
+
+.containerr input:nth-child(1):checked ~ .dots label:nth-child(1),
+.containerr input:nth-child(2):checked ~ .dots label:nth-child(2),
+.containerr input:nth-child(3):checked ~ .dots label:nth-child(3)
+{
+    opacity: 1;
+    
+}
+
+.containerr .slider{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.containerr .slider .slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--img);
+    background-size: cover;
+    clip-path: circle(0% at 0% 50%);  
+    transition: 1.5;
+    transition-delay: 0s; 
+    background-position: left;
+}
+
+.containerr .slider .slide:nth-child(even){
+    clip-path: circle(0% at 100% 50%);    
+    background-position: right; 
+}
+.containerr input:nth-child(1):checked ~ .slider .slide:nth-child(1),
+.containerr input:nth-child(2):checked ~ .slider .slide:nth-child(2),
+.containerr input:nth-child(3):checked ~ .slider .slide:nth-child(3){
+    clip-path: circle(150% at 50% 50%);
+    transition-delay: 1s;
+    background-position: center;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "futura md bt";
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body {
+    background: dodgerblue;
+}
+header {
+    background: #fff;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+header .logo {
+    font-size: 30px;
+    text-transform: uppercase;
+}
+header nav ul {
+    display: flex;
+}
+header nav ul li a {
+    display: inline-block;
+    color: #000;
+    padding: 5px 0;
+    margin: 0 10px;
+    border: 3px solid transparent;
+    text-transform: uppercase;
+    transition: 0.2s;
+}
+header nav ul li a:hover,
+header nav ul li a.active {
+    border-bottom-color: dodgerblue;
+}
+.hamburger {
+    cursor: pointer;
+    display: none;
+}
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    margin: 5px 0;
+    background: #000;
+}
+@media only screen and (max-width: 900px) {
+    header {
+        padding: 0 30px;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .hamburger {
+        display: block;
+    }
+    header nav {
+        position: absolute;
+        width: 100%;
+        left: -100%;
+        top: 70px;
+        width: 100%;
+        background: #fff;
+        padding: 30px;
+        transition: 0.3s;
+    }
+    header #nav_check:checked ~ nav {
+        left: 0;
+    }
+    header nav ul {
+        display: block;
+    }
+    header nav ul li a {
+        margin: 5px 0;
+    }
+}
+
+
+.search-box{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    background: #3d3d3d;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+    top: 50%;
+    left: 50%;
+}
+
+.search-box:hover > .search-txt{
+    width: 240px;
+    padding: 0 6px;
+}
+
+.search-box:hover > .search-btn{
+    background: #fff;
+}
+
+.search-btn{
+    color:blue;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #cb0404;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+
+}
+
+.search-txt{
+    border:none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: #fff;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 240px;
+
+}
