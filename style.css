@@ -16,7 +16,7 @@ body {
 
 .glass-container {
     width: 350px;
-    height: 450px;
+    height: 350px;
     position: relative;
     z-index: 1;
     background: rgba(255, 255, 255, 0.1);
@@ -140,7 +140,7 @@ body {
 
 .glass-containerr {
     width: 350px;
-    height: 450px;
+    height: 480px;
     position: relative;
     z-index: 1;
     background: rgba(255, 255, 255, 0.1);

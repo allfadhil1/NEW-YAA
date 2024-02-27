@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Register Page</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -11,7 +11,7 @@
 |
      <div class="glass-containerr">
         <div class="login-box">
-            <h2>Login</h2>
+            <h2>Register</h2>
             <form action="register.php" method="post">
 
                 <input type="text" id="Nama_Depan" name="Nama_Depan" required placeholder="Nama_Depan">
@@ -21,7 +21,7 @@
                 <input type="text" id="Username" name="Username" required placeholder="Username">
 
                 <input type="password" id="Password" name="Password" required placeholder="Paassword">
-                
+                <br>
                 <td>
                       <select name="Level" id="Level" required>
                        <option disabled selected> Pilih </option>
