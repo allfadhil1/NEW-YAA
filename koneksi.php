@@ -7,7 +7,7 @@ $databasePassword = "";
 $mysql = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
 
 if($mysql){
-    echo "koneksi db berhasil.<br/>";
+  //  echo "koneksi db berhasil.<br/>";
 } else{
     echo "koneksi gagal.<br/>";
 
